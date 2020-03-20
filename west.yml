@@ -31,6 +31,10 @@ manifest:
       url-base: https://github.com/ARMmbed
     - name: civetweb
       url-base: https://github.com/civetweb
+    - name: nrfxlib_fork
+      url-base: ssh://git@bitbucket.nordicsemi.no:7999/krknwk
+    - name: hal_nordic_fork
+      url-base: https://github.com/JakubPegza
 
   # The list of external projects for the nRF Connect SDK.
   #
@@ -69,7 +73,8 @@ manifest:
       revision: 30b7efa827b04d2e47840716b0372737fe7d6c92
     - name: nrfxlib
       path: nrfxlib
-      revision: 037cb2339ef13e71f0600fcc111700efaf799d08
+      remote: nrfxlib_fork
+      revision: feature/mpsl_802154_support
     - name: cmock
       path: test/cmock
       revision: c243b9a7a7b3c471023193992b46cf1bd1910450
@@ -97,8 +102,8 @@ manifest:
       revision: 9ee6b9b9511151d0d64a74d532d39c6f2bbd4f16
     - name: hal_nordic
       path: modules/hal/nordic
-      remote: zephyrproject
-      revision: 12d7647870888e4cb0e421f2b26884c2e76915ac
+      remote: hal_nordic_fork
+      revision: feature/802154-mpsl-support
     - name: hal_st
       path: modules/hal/st
       remote: zephyrproject
