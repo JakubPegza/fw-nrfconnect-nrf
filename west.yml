@@ -35,6 +35,8 @@ manifest:
       url-base: https://github.com/alexa
     - name: jciupis
       url-base: https://github.com/jciupis
+    - name: pegza
+      url-base: https://github.com/JakubPegza
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -93,9 +95,9 @@ manifest:
     # changes.
     - name: hal_nordic
       repo-path: hal_nordic
-      revision: af2aa1e45bf9906e8518399bf3f17949c4c1d4a0
+      revision: c5122e6998dd219b6584366d21c6753fb3a86c51
       path: modules/hal/nordic
-      remote: jciupis
+      remote: pegza
     - name: mcuboot
       repo-path: sdk-mcuboot
       revision: 82828b5cee28499157c340454e8cfa7a9beecd98
