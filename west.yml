@@ -35,6 +35,10 @@ manifest:
       url-base: https://github.com/alexa
     - name: nordicsemi
       url-base: https://github.com/NordicSemiconductor
+    - name: pegza_fork
+      url-base: https://github.com/JakubPegza
+    - name: pakw_fork
+      url-base: https://github.com/pkwiek
 
   # If not otherwise specified, the projects below should be obtained
   # from the ncs remote.
@@ -51,8 +55,9 @@ manifest:
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/introduction/index.html
     # https://developer.nordicsemi.com/nRF_Connect_SDK/doc/latest/zephyr/guides/modules.html
     - name: zephyr
-      repo-path: sdk-zephyr
-      revision: v2.4.99-ncs1-rc1
+      remote: pakw_fork
+      repo-path: zephyr
+      revision: create-hal-nrf-802154-repo
       import:
         # In addition to the zephyr repository itself, NCS also
         # imports the contents of zephyr/west.yml at the above
@@ -99,7 +104,8 @@ manifest:
     - name: nrfxlib
       repo-path: sdk-nrfxlib
       path: nrfxlib
-      revision: 984e6f9b9c5b124c94caff52807c9d5c66eacb60
+      revision: feature/remove_nrf_802154_sl
+      remote: pegza_fork
     - name: trusted-firmware-m
       repo-path: sdk-trusted-firmware-m
       path: modules/tee/tfm
@@ -108,6 +114,10 @@ manifest:
       repo-path: sdk-mcuboot
       path: modules/tee/tfm-mcuboot
       revision: 81d19f017f18f1bc6bea906d96fd45fba3672064
+    - name: hal-nrf-802154
+      repo-path: nRF-IEEE-802.15.4-radio-driver-1
+      path: modules/hal/nordic/hal-nrf-802154
+      revision: feature/KRKNWK-8785_change_driver_to_sdk_802154_cp
     - name: connectedhomeip
       repo-path: sdk-connectedhomeip
       path: modules/lib/connectedhomeip
